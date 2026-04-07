@@ -1,0 +1,3 @@
+## DevLog
+- 2026-04-06: Fixed 4 bugs found after initial pass: split ratio was inverted (source was 60%, now capped at 40% of content); height math could overflow innerH; no feedback when trace finds no path (now shows "no path found"); FROM ★ indicator now shows in symbols panel header when FROM is in a different file (previously disappeared on file switch). Also: info panel split into calls/calledby top + source bottom, trace cross-file nav, AdjacencyMap perf, $VISUAL/$EDITOR, test fix.
+- 2026-04-03: v0.1 — 3-pane TUI (files | symbols | info). Go/Python/TS/JS via tree-sitter, Markdown in file tree only. Header bar, resize handling, file watcher, search, trace mode, g/G jump, scroll indicators.
