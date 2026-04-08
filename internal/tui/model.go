@@ -247,6 +247,13 @@ func (m *Model) reload() tea.Cmd {
 func (m Model) handleKey(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	key := msg.String()
 
+	if key == "ctrl+c" {
+		if m.watcher != nil {
+			m.watcher.Close()
+		}
+		return m, tea.Quit
+	}
+
 	if m.showHelp {
 		if key == "?" || key == "esc" || key == "q" {
 			m.showHelp = false
@@ -296,7 +303,7 @@ func (m Model) handleKey(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	}
 
 	switch key {
-	case "q", "ctrl+c":
+	case "q":
 		if m.watcher != nil {
 			m.watcher.Close()
 		}
