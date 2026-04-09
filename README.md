@@ -33,21 +33,15 @@ graphr
 ```
 
 Note: automated releases currently publish Linux amd64 only (tree-sitter/CGO).
+
 ## Languages
+
 Go, Python, TypeScript, JavaScript (Markdown files shown in tree, not graphed)
 
 ## Requirements
+
 - Go 1.23+
 - C compiler (tree-sitter uses CGO)
-
-## Build & Run
-
-```bash
-cd graphr
-go mod tidy
-go build -o graphr ./cmd/graphr
-./graphr /path/to/project
-```
 
 ## Keybindings
 
@@ -61,13 +55,6 @@ go build -o graphr ./cmd/graphr
 | `r` | Reload/re-parse |
 | `q` | Quit |
 
-## Layout
+## License
 
-```
-┌─ files ──────┬─── call graph ────────────────┬─ info ──────────┐
-│ main.go      │  [nodes + directed edges]     │ handleRequest   │
-│ handler.go   │  ASCII rendering              │ handler.go:14   │
-├─ symbols ────│  arrow keys navigate          │ CALLS / CALLED  │
-│ fn  main     │                               │ BY + source     │
-└──────────────┴───────────────────────────────┴─────────────────┘
-```
+[AGPL-3.0](LICENSE)
