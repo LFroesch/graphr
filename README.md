@@ -4,6 +4,8 @@ TUI call-graph visualizer. Point it at a codebase, see functions and how they co
 
 ## Quick Install
 
+Supported platforms: Linux and macOS. On Windows, use WSL.
+
 Recommended (installs to `~/.local/bin`):
 
 ```bash
