@@ -47,3 +47,7 @@ logs/
 chats/
 .claude/
 .env
+# Allow release workflow even when .github is globally ignored
+!.github/
+!.github/workflows/
+!.github/workflows/release.yml
