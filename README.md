@@ -55,6 +55,15 @@ Go, Python, TypeScript, JavaScript (Markdown files shown in tree, not graphed)
 | `r` | Reload/re-parse |
 | `q` | Quit |
 
+## Editor
+
+`o` opens the selected symbol in your editor. Resolution order: `$VISUAL` → `$EDITOR` → cursor → code → nvim → vim → nano → vi.
+
+```bash
+export EDITOR=nvim   # terminal editor
+export VISUAL=cursor # GUI editor (checked first)
+```
+
 ## License
 
 [AGPL-3.0](LICENSE)
