@@ -29,6 +29,7 @@ project-launcher
 scout
 scriptgodx
 zap
+graphr
 
 # OS files
 .DS_Store
