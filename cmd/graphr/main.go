@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 
@@ -9,10 +10,20 @@ import (
 	"github.com/LFroesch/graphr/internal/tui"
 )
 
+var version = "dev"
+
 func main() {
+	showVersion := flag.Bool("version", false, "print version and exit")
+	flag.Parse()
+
+	if *showVersion {
+		fmt.Println("graphr", version)
+		return
+	}
+
 	dir := "."
-	if len(os.Args) > 1 {
-		dir = os.Args[1]
+	if flag.NArg() > 0 {
+		dir = flag.Arg(0)
 	}
 
 	m, err := tui.New(dir)

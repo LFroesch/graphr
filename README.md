@@ -30,6 +30,7 @@ Command:
 
 ```bash
 graphr
+graphr --version
 ```
 
 Note: automated releases currently publish Linux amd64 only (tree-sitter/CGO).
@@ -42,6 +43,7 @@ Go, Python, TypeScript, JavaScript (Markdown files shown in tree, not graphed)
 
 - Go 1.23+
 - C compiler (tree-sitter uses CGO)
+- best results come from opening a local checkout rather than a single loose file
 
 ## Keybindings
 

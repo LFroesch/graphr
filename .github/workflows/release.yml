@@ -31,7 +31,7 @@ jobs:
           set -euo pipefail
           out="${BINARY_NAME}-linux-amd64"
           echo "Building $out"
-          CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags="-s -w" -o "$out" "${BUILD_TARGET}"
+          CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags="-s -w -X main.version=${GITHUB_REF_NAME}" -o "$out" "${BUILD_TARGET}"
 
       - name: Generate checksums
         shell: bash
